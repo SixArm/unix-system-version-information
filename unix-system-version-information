@@ -142,7 +142,7 @@ if cmd sw_vers; then
     sw_vers
 fi
 
-for file in /etc/redhat-release /proc/version /etc/issue.net
+for file in /etc/debian_version /etc/mandrake-release /etc/redhat-release /etc/SuSE-release /proc/version /etc/issue.net
 do
   if [ -e "$file" ]; then
     out; out "cat $file"
