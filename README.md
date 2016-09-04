@@ -22,11 +22,13 @@ Example:
     ProductVersion:    10.12
     BuildVersion:      16A304a
 
-Goals:
+## Goals
+
+This script has three goals:
 
   * Print the OS name, version, build, and related information.
 
-  * Work cross platform, to handle all flavors of Unix.
+  * Run reliably cross platform, to work well on all flavors of Unix.
 
   * Print information that may be useful for diagnostics and debugging.
 
