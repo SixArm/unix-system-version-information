@@ -117,17 +117,17 @@ now() { date -u "+%Y-%m-%dT%H:%M:%SZ" ; }
 out "Unix System Version Information"
 out "timestamp:" $(now)
 
-if (cmd uname); then
+if cmd uname; then
     out; out "uname -a"
     uname -a
 fi
 
-if (cmd lsb_release); then
+if cmd lsb_release; then
     out; out "lsb_release -a"
     lsb_release -a
 fi
 
-if (cmd sw_vers); then
+if cmd sw_vers; then
     out; out "sw_vers"
     sw_vers
 fi
