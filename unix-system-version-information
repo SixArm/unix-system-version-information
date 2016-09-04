@@ -114,8 +114,18 @@ out () { printf %s\\n "$*" ; }
 cmd() { command -v $1 >/dev/null 2>&1 ; }
 now() { date -u "+%Y-%m-%dT%H:%M:%SZ" ; }
 
+# These three globals should be able to be set on any 
+# Unix OS as these specific uname args should be portable.
+# Possible TO-DO: verify e.g. if uname -r
+os_name=`uname -s`
+os_release=`uname -r`
+machine_hardware_name=`uname -m`
+
 out "Unix System Version Information"
 out "timestamp:" $(now)
+out "operating system name:" $os_name
+out "operating system release:" $os_release
+out "machine hardware name:" $machine_hardware_name
 
 if cmd uname; then
     out; out "uname -a"
