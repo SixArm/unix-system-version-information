@@ -38,7 +38,7 @@
 #   * The `uname` command.
 #   * The `lsb_release` command on Linux.
 #   * The `sw_vers` command on macOS.
-#   * The `redhat-release` file on RedHat.
+#   * Distro files such as `/etc/*-release`, `/etc/*_version`, `/proc/version`, `/etc/issue.net`.
 #   * We welcome more ways of finding information.
 #
 # ## uname command
@@ -101,9 +101,9 @@
 # ## Tracking
 #
 # Command: unix-system-info
-# Version: 3.0.0
+# Version: 3.1.0
 # Created: 2014-12-24
-# Updated: 2016-09-02
+# Updated: 2016-09-04
 # License: BSD, MIT, GPL
 # Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
 ##

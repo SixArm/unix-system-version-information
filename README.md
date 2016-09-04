@@ -40,7 +40,7 @@ This implementation looks for information in these places:
   * The `uname` command.
   * The `lsb_release` command on Linux.
   * The `sw_vers` command on macOS.
-  * The `redhat-release` file on RedHat.
+  * Distro files such as `/etc/*-release`, `/etc/*_version`, `/proc/version`, `/etc/issue.net`.
   * We welcome more ways of finding information.
 
 ## uname command
@@ -106,11 +106,18 @@ Example of `/etc/redhat-release` file:
 * Add example of more Unix flavors, such as AIX, Solaris, etc.
 
 
+## Thanks
+
+Thanks for advice and improvements:
+
+  * [andlrc](https://www.reddit.com/user/andlrc)
+  * [whetu](https://www.reddit.com/user/whetu)
+
 ## Tracking
 
 * Command: unix-system-info
-* Version: 3.0.0
+* Version: 3.1.0
 * Created: 2014-12-24
-* Updated: 2016-09-02
+* Updated: 2016-09-04
 * License: BSD, MIT, GPL
 * Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
