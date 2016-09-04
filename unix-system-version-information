@@ -134,9 +134,8 @@ fi
 
 for file in /etc/redhat-release /proc/version /etc/issue.net
 do
-  if [[ -e $file ]]
-  then
+  if [ -e "$file" ]; then
     out; out "cat $file"
-    cat $file
+    cat -- "$file"
   fi;
 done
