@@ -178,26 +178,31 @@ out "operating system name:" $os_name
 out "operating system release:" $os_release
 out "machine hardware name:" $machine_hardware_name
 
+# The `uname` command works on all our target systems.
 if cmd uname; then
   out; out "uname -a"
   uname -a
 fi
 
+# The `sw_vers` command is for Apple macOS / OS X / Darwin.
 if cmd sw_vers; then
   out; out "sw_vers"
   sw_vers
 fi
 
+# The `pkginfo` command is for Solaris and SunOS.
 if cmd pkginfo; then
   out; out "pkginfo for SUNWsolnm"
   pkginfo  -l SUNWsolnm | grep VERSION
 fi
 
+# The `lsb_release` is for Linux system base targets.
 if cmd lsb_release; then
   out; out "lsb_release -a"
   lsb_release -a
 fi
 
+# Try many files that may have distribution information.
 for file in \
   /proc/version \
   /etc/issue \
