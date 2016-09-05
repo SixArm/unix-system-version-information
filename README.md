@@ -29,7 +29,7 @@ This script has three goals:
 
   * Print the OS name, version, build, and related information.
 
-  * Run reliably cross platform, to work well on all flavors of Unix.
+  * Run cross platform on many Unix systems and Unix-like systems.
 
   * Print information that may be useful for diagnostics and debugging.
 
@@ -41,8 +41,12 @@ This implementation looks for information in these places:
   * The `uname` command.
   * The `lsb_release` command on Linux.
   * The `sw_vers` command on macOS.
-  * Distro files such as `/etc/*-release`, `/etc/*_version`, `/proc/version`, `/etc/issue.net`.
+  * Distribution files such as `release`, `version`, `issue.net`.
   * We welcome more ways of finding information.
+
+This implementation is intended to work on current versions of:
+BSD, Debian, Linux, macOS, Mandrake OS X, RedHat, Solaris, SunOS,
+SuSE, Ubuntu, etc.
 
 
 ## uname command
@@ -95,11 +99,17 @@ Example of `sw_vers` running on macOS:
     BuildVersion:14A389
 
 
-## /etc/*-release file
+## release version files
 
-Some Unix systems store information in a text file in a typical location.
+Some systems put release version information in a plain text file.
+
+The file is often called "release" or "version" or similar, and stored
+in a typical location.
 
 Examples:
+
+    $ cat /etc/release
+    ...TODO...
 
     $ cat /etc/debian_version
     stretch/sid

@@ -29,7 +29,7 @@
 #
 #   * Print the OS name, version, build, and related information.
 #
-#   * Work cross platform, to handle all flavors of Unix.
+#   * Run cross platform on many Unix systems and Unix-like systems.
 #
 #   * Print information that may be useful for diagnostics and debugging.
 #
@@ -41,8 +41,12 @@
 #   * The `uname` command.
 #   * The `lsb_release` command on Linux.
 #   * The `sw_vers` command on macOS.
-#   * Distro files such as `/etc/*-release`, `/etc/*_version`, `/proc/version`, `/etc/issue.net`.
+#   * Distribution files such as `release`, `version`, `issue.net`.
 #   * We welcome more ways of finding information.
+#
+# This implementation is intended to work on current versions of:
+# BSD, Debian, Linux, macOS, Mandrake OS X, RedHat, Solaris, SunOS,
+# SuSE, Ubuntu, etc.
 #
 #
 # ## uname command
@@ -95,11 +99,16 @@
 #     BuildVersion:14A389
 #
 #
-# ## version release text files
+# ## release version text files
 #
-# Some Unix systems store information in a text file in a typical location.
+# Some systems put release version information in a plain text file.
+#
+# The file is often called "release" or "version" or similar, and stored
+# in a typical location.
 # 
 # Examples:
+#
+#    $ cat /etc/release
 #
 #    $ cat /etc/debian_version
 #    stretch/sid
@@ -133,9 +142,9 @@
 # ## Tracking
 #
 # Command: unix-system-info
-# Version: 3.1.0
+# Version: 3.2.0
 # Created: 2014-12-24
-# Updated: 2016-09-04
+# Updated: 2016-09-05
 # License: BSD, MIT, GPL
 # Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
 ##
@@ -174,7 +183,15 @@ if cmd sw_vers; then
     sw_vers
 fi
 
-for file in /etc/debian_version /etc/mandrake-release /etc/redhat-release /etc/SuSE-release /proc/version /etc/issue.net
+for file in \
+  /proc/version \
+  /etc/issue.net \
+  /etc/release \
+  /etc/mandrake-release \
+  /etc/redhat-release \
+  /etc/slackware-release \
+  /etc/SuSE-release \
+  /etc/debian_version
 do
   if [ -e "$file" ]; then
     out; out "cat $file"
