@@ -45,9 +45,9 @@
 #   * Distribution files such as `release`, `version`, `issue.net`.
 #   * We welcome more ways of finding information.
 #
-# This implementation is intended to work on current versions of:
-# BSD, Debian, Linux, macOS, Mandrake OS X, RedHat, Solaris, SunOS,
-# SuSE, Ubuntu, etc.
+#  This implementation is intended to work on current versions of:
+#  AIX, BSD, Darwin, Debian, FreeBSD, HPUX, Linux, macOS, Mandrake, 
+#  OS X, RedHat, Solaris, SunOS, SuSE, Ubuntu, etc.
 #
 #
 # ## uname command

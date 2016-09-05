@@ -46,8 +46,8 @@ This implementation looks for information in these places:
   * We welcome more ways of finding information.
 
 This implementation is intended to work on current versions of:
-BSD, Debian, Linux, macOS, Mandrake OS X, RedHat, Solaris, SunOS,
-SuSE, Ubuntu, etc.
+AIX, BSD, Darwin, Debian, FreeBSD, HPUX, Linux, macOS, Mandrake, 
+OS X, RedHat, Solaris, SunOS, SuSE, Ubuntu, etc.
 
 
 ## uname command
