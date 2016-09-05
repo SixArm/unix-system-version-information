@@ -41,6 +41,7 @@ This implementation looks for information in these places:
   * The `uname` command.
   * The `lsb_release` command on Linux.
   * The `sw_vers` command on macOS.
+  * The `pkginfo` command on Solaris.
   * Distribution files such as `release`, `version`, `issue.net`.
   * We welcome more ways of finding information.
 
@@ -54,20 +55,26 @@ SuSE, Ubuntu, etc.
 This script calls the `uname` command, which prints the
 operating system name plus more system information.
 
-Example of `uname` running on Ubuntu Linux:
+Example on Ubuntu Linux:
 
     $ uname -a
     Linux hostname 2.6.35.4-rscloud #8 SMP
     Mon Sep 20 15:54:33 UTC 2010
     x86_64 GNU/Linux
 
-Example of `uname` running on macOS:
+Example on Apple macOS:
 
     $ uname -a
     Darwin hostname 14.0.0
     Darwin Kernel Version 14.0.0:
     Fri Sep 19 00:26:44 PDT 2014;
     root:xnu-2782.1.97~2/RELEASE_X86_64 x86_64
+
+Example on Oracle Solaris:
+
+    $ uname -a
+    SunOS sndcc02.sanjose.ibm.com 5.10 Generic sun4u sparc
+    SUNW,Sun-Fire-V490
 
 
 ## lsb_release command
@@ -149,7 +156,7 @@ Thanks for advice and improvements:
 ## Tracking
 
 * Command: unix-system-info
-* Version: 3.1.0
+* Version: 3.3.0
 * Created: 2014-12-24
 * Updated: 2016-09-04
 * License: BSD, MIT, GPL
