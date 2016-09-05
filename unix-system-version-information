@@ -55,13 +55,6 @@
 # This script calls the `uname` command, which prints the
 # operating system name plus more system information.
 #
-# Example on Ubuntu Linux:
-#
-#     $ uname -a
-#     Linux hostname 2.6.35.4-rscloud #8 SMP
-#     Mon Sep 20 15:54:33 UTC 2010
-#     x86_64 GNU/Linux
-#
 # Example on Apple macOS:
 #
 #     $ uname -a
@@ -75,6 +68,13 @@
 #     $ uname -a
 #     SunOS sndcc02.sanjose.ibm.com 5.10 Generic sun4u sparc
 #     SUNW,Sun-Fire-V490
+#
+# Example on Ubuntu Linux:
+#
+#     $ uname -a
+#     Linux hostname 2.6.35.4-rscloud #8 SMP
+#     Mon Sep 20 15:54:33 UTC 2010
+#     x86_64 GNU/Linux
 #
 #
 # ## lsb_release command
